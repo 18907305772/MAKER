@@ -1,6 +1,6 @@
 # Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog
 
-Fanqiwan, Weizhou Shen, Ke Yang, Xiaojun Quan*, Wei Bi*
+Fanqi Wan, Weizhou Shen, Ke Yang, Xiaojun Quan*, Wei Bi*
 
 *: Co-corresponding Authors
 
