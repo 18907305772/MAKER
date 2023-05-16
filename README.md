@@ -43,29 +43,28 @@ Our released models are listed as following. You could download these models and
 |     [MAKER-camrest-full-kb-t5-base]()     |   26.19  |   72.09  |
 |     [MAKER-camrest-full-kb-t5-large]()     |   25.34  |   72.43  |
 ## Requirements
-
-### Retriever Pretraining
-
--   apex == 0.9.10dev
--   datasets == 2.0.0
--   deepspeed == 0.6.0
--   fairscale == 0.4.6
--   filelock == 3.6.0
--   packaging == 21.3
--   scikit-learn == 1.0.2
--   torch == 1.8.1
--   transformers == 4.17.0
-
-### System Training
-
--   dataclasses == 0.8
--   filelock == 3.4.1
--   nltk == 3.6.7
--   packaging == 21.3
--   tensorboard == 2.9.1
--   torch == 1.8.1
--   transformers ==  3.0.2
-
+```
+# Retriever Pretraining
+apex == 0.9.10dev
+datasets == 2.0.0
+deepspeed == 0.6.0
+fairscale == 0.4.6
+filelock == 3.6.0
+packaging == 21.3
+scikit-learn == 1.0.2
+torch == 1.8.1
+transformers == 4.17.0
+```
+```
+# System Training
+dataclasses == 0.8
+filelock == 3.4.1
+nltk == 3.6.7
+packaging == 21.3
+tensorboard == 2.9.1
+torch == 1.8.1
+transformers ==  3.0.2
+```
 
 
 ## Description of Codes
@@ -107,7 +106,7 @@ bash run_sup_example_camrest.sh
 
 When training is completed, replace the corresponding models (with the same file name) in **Preparation** with the trained models.
 
-### System training
+### System Training
 
 Please run this after **Preparation**.
 
