@@ -28,20 +28,60 @@ We propose a framework for end-to-end task oriented dialog that decouple knowled
 </p>
 
 ## Model List
-Our released models are listed as following. You could download these models and use the corresponding test scripts (replace the "--test_model_path" args with the downloaded model directory) to get evaluation results.
+Our released models are listed as following.
 
 |              Model              | BLEU | Entity F1 |
 |:-------------------------------|:--------:|:--------:|
-|  [MAKER-mwoz-condensed-kb-t5-base]() |   17.23 |   53.68 |
-| [MAKER-mwoz-condensed-kb-t5-large]() |   18.77  |   54.72  |
-|    [MAKER-smd-condensed-kb-t5-base]()    |   24.79  |   69.79  |
-|    [MAKER-smd-condensed-kb-t5-large]()  |   25.91  |   71.30  |
-|   [MAKER-camrest-condensed-kb-t5-base]()|   25.04  |   73.09  |
-|  [MAKER-camrest-condensed-kb-t5-large]()  |   25.53  |   74.36  |
-|     [MAKER-mwoz-full-kb-t5-base]()     |   16.25  |   50.87  |
-|     [MAKER-mwoz-full-kb-t5-large]()     |   18.23  |   52.12  |
-|     [MAKER-camrest-full-kb-t5-base]()     |   26.19  |   72.09  |
-|     [MAKER-camrest-full-kb-t5-large]()     |   25.34  |   72.43  |
+|  [MAKER-mwoz-condensed-kb-t5-base](https://huggingface.co/Wanfq/MAKER-mwoz-condensed-kb-t5-base) |   17.23 |   53.68 |
+| [MAKER-mwoz-condensed-kb-t5-large](https://huggingface.co/Wanfq/MAKER-mwoz-condensed-kb-t5-large) |   18.77  |   54.72  |
+|    [MAKER-smd-condensed-kb-t5-base](https://huggingface.co/Wanfq/MAKER-smd-condensed-kb-t5-base)    |   24.79  |   69.79  |
+|    [MAKER-smd-condensed-kb-t5-large](https://huggingface.co/Wanfq/MAKER-smd-condensed-kb-t5-large)  |   25.91  |   71.30  |
+|   [MAKER-camrest-condensed-kb-t5-base](https://huggingface.co/Wanfq/MAKER-camrest-condensed-kb-t5-base)|   25.04  |   73.09  |
+|  [MAKER-camrest-condensed-kb-t5-large](https://huggingface.co/Wanfq/MAKER-camrest-condensed-kb-t5-large)  |   25.53  |   74.36  |
+|     [MAKER-mwoz-full-kb-t5-base](https://huggingface.co/Wanfq/MAKER-mwoz-full-kb-t5-base)     |   16.25  |   50.87  |
+|     [MAKER-mwoz-full-kb-t5-large](https://huggingface.co/Wanfq/MAKER-mwoz-full-kb-t5-large)     |   18.23  |   52.12  |
+|     [MAKER-camrest-full-kb-t5-base](https://huggingface.co/Wanfq/MAKER-smd-condensed-kb-t5-base)     |   26.19  |   72.09  |
+|     [MAKER-camrest-full-kb-t5-large](https://huggingface.co/Wanfq/MAKER-smd-condensed-kb-t5-large)     |   25.34  |   72.43  |
+
+You could download these models and use the corresponding test scripts to get evaluation results. Here is an example:
+```
+# test 'MAKER-mwoz-condensed-kb-t5-base', use 'run_test_condensed_mwoz_base.sh'.
+#!/bin/bash
+
+export CUDA_VISIBLE_DEVICES=0
+ES=48000
+DATA=RRG_data1_times_gtdb_gesa_times-cr-dyn
+RMN=others/models/RRG/retriever_train_new_trunc_data_used_new_v0_seed-111_bert-base-uncased_ep-10_lr-5e-5_wd-0.01_maxlen-128_bs-32_ngpu-4_pln-128_tmp-0.05_hnw-0
+python test.py \
+    --per_gpu_eval_batch_size 32 \
+    --model_size base \
+    --dataset_name mwoz_gptke \
+    --metric_version new1 \
+    --retriever_model_name ${RMN} \
+    --test_data others/data/mwoz_gptke/data_used/${DATA}/test.json \
+    --dbs others/data/mwoz_gptke/data_used/${DATA}/all_db.json \
+    --test_model_path DOWNLOAD_PATH/MAKER-mwoz-condensed-kb-t5-base/generator_best_dev \
+    --use_ranker True \
+    --rank_attribute_start_step 0 \
+    --rank_attribute_pooling avg_wo_context \
+    --ranker_attribute_ways threshold \
+    --threshold_attr 0.1 \
+    --ranker_times_matrix True \
+    --ranker_times_matrix_start_step 0 \
+    --ranker_times_matrix_loss_type bce \
+    --ranker_times_matrix_query cr \
+    --generator_distill_retriever True \
+    --generator_distill_retriever_start_step 20000 \
+    --use_delex True \
+    --use_dk True \
+    --dk_mask True \
+    --end_eval_step ${ES} \
+    --use_gt_dbs True \
+    --use_retriever_for_gt True \
+    --top_k_dbs 6 \
+    "$@"
+```
+
 ## Requirements
 ```
 # Retriever Pretraining
