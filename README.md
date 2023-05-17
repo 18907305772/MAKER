@@ -45,7 +45,7 @@ Our released models are listed as following.
 
 You could download these models and use the corresponding test scripts to get evaluation results. Here is an example:
 ```
-# test 'MAKER-mwoz-condensed-kb-t5-base', use 'run_test_condensed_mwoz_base.sh'.
+# Test 'MAKER-mwoz-condensed-kb-t5-base', use 'run_test_condensed_mwoz_base.sh'. Please run this after **Preparation**.
 #!/bin/bash
 
 export CUDA_VISIBLE_DEVICES=0
