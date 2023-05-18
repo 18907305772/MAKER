@@ -5,7 +5,7 @@ Fanqi Wan, Weizhou Shen, Ke Yang, Xiaojun Quan*, Wei Bi*
 *: Co-corresponding Authors
 
 
-This is repo of the official source code of [Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog](), a paper in **ACL 2023**. The repo contains the code and dataset for training and evaluation.
+This is a repo of the official source code of [Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog](https://arxiv.org/abs/2305.10149), a paper in **ACL 2023**. The repo contains the code and dataset for training and evaluation.
 
 ## Quick Links
 
@@ -226,9 +226,11 @@ bash run_test_full_camrest_large.sh
 Please cite our paper if you use MAKER in your work:
 
 ```bibtex
-@inproceedings{wan2023maker,
-   title={Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog},
-   author={Wan, Fanqi and Shen, Weizhou and Yang, Ke and Quan, Xiaojun and Bi, Wei},
-   booktitle={Association for Computational Linguistics (ACL)},
-   year={2023}
+@misc{wan2023maker,
+      title={Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog}, 
+      author={Fanqi Wan and Weizhou Shen and Ke Yang and Xiaojun Quan and Wei Bi},
+      year={2023},
+      eprint={2305.10149},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
