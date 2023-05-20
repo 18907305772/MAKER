@@ -226,11 +226,9 @@ bash run_test_full_camrest_large.sh
 Please cite our paper if you use MAKER in your work:
 
 ```bibtex
-@misc{wan2023maker,
-      title={Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog}, 
-      author={Fanqi Wan and Weizhou Shen and Ke Yang and Xiaojun Quan and Wei Bi},
-      year={2023},
-      eprint={2305.10149},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{wan2023multi,
+  title={Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog},
+  author={Wan, Fanqi and Shen, Weizhou and Yang, Ke and Quan, Xiaojun and Bi, Wei},
+  journal={arXiv preprint arXiv:2305.10149},
+  year={2023}
 }
