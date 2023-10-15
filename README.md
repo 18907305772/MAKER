@@ -3,8 +3,9 @@
 
 <div id="top" align="center">
 
-Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog
------------------------------
+<div align="center">
+<h1>Multi-Grained Knowledge Retrieval for End-to-End </br> Task-Oriented Dialog</h1>
+</div>
 
 <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version"> 
 <img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License">
