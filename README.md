@@ -1,11 +1,33 @@
-# Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog
+<p align="center" width="100%">
+</p>
 
-Fanqi Wan, Weizhou Shen, Ke Yang, Xiaojun Quan*, Wei Bi*
+<div id="top" align="center">
 
-*: Co-corresponding Authors
+Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog
+-----------------------------
+
+<img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version"> 
+<img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License">
+<img src="https://img.shields.io/github/stars/18907305772/MAKER?color=yellow" alt="Stars">
+<img src="https://img.shields.io/github/issues/18907305772/MAKER?color=red" alt="Issues">
+
+<h4> |<a href="https://arxiv.org/abs/2305.10149"> 📑 Paper </a> |
+<a href="https://huggingface.co/models?sort=trending&search=Wanfq%2FMAKER"> 🤗 Model </a> |
+<a href="https://github.com/18907305772/MAKER"> 🐱 Github Repo </a> |
+</h4>
+
+<!-- **Authors:** -->
+
+_**Fanqi Wan<sup>†</sup>, Weizhou Shen<sup>†</sup>, Ke Yang<sup>†</sup>, Xiaojun Quan<sup>†</sup>, Wei Bi<sup>‡</sup>**_
 
 
-This is a repo of the official source code of [Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog](https://arxiv.org/abs/2305.10149), a paper in **ACL 2023**. The repo contains the code and dataset for training and evaluation.
+<!-- **Affiliations:** -->
+
+
+_<sup>†</sup> Sun Yat-sen University,
+<sup>‡</sup> Tencent AI Lab_
+
+</div>
 
 ## Quick Links
 
