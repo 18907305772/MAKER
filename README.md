@@ -249,9 +249,11 @@ bash run_test_full_camrest_large.sh
 Please cite our paper if you use MAKER in your work:
 
 ```
-@article{wan2023multi,
+@inproceedings{wan2023multi,
   title={Multi-Grained Knowledge Retrieval for End-to-End Task-Oriented Dialog},
   author={Wan, Fanqi and Shen, Weizhou and Yang, Ke and Quan, Xiaojun and Bi, Wei},
-  journal={arXiv preprint arXiv:2305.10149},
+  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={11196--11210},
   year={2023}
 }
+```
