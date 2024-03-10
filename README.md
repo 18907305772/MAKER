@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/github/issues/18907305772/MAKER?color=red" alt="Issues">
 
 <h4> |<a href="https://arxiv.org/abs/2305.10149"> 📑 Paper </a> |
-<a href="https://huggingface.co/models?sort=trending&search=Wanfq%2FMAKER"> 🤗 Model </a> |
+<a href="https://huggingface.co/collections/Wanfq/maker-6527fde2a4be83259cdfc9e9"> 🤗 HuggingFace Repo </a> |
 <a href="https://github.com/18907305772/MAKER"> 🐱 Github Repo </a> |
 </h4>
 
